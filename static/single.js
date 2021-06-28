@@ -22,26 +22,12 @@ var Paul_Single = function (config) {
             menu.classList.toggle("active");
         };
 
-        ks.select(".light-btn").onclick = this.night;
-
         var search = document.getElementsByClassName("search-btn")[0];
         var bar = document.getElementsByClassName("head-search")[0];
 
         search.addEventListener("click", function () {
             bar.classList.toggle("active");
         })
-    };
-
-    // 关灯切换
-    this.night = function () {
-        if(body.classList.contains("dark-theme")){
-            body.classList.remove("dark-theme");
-            document.cookie = "night=false;" + "path=/;" + "max-age=21600";
-        }
-        else{
-            body.classList.add("dark-theme");
-            document.cookie = "night=true;" + "path=/;" + "max-age=21600";
-        }
     };
 
     // 目录树

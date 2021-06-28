@@ -34,6 +34,7 @@
 <?php endif; ?>
         <section class="sub-footer">
             <p>© <?php echo date('Y'); ?> <a href="<?php $this -> options -> siteUrl(); ?>"><?php $this -> options -> title(); ?></a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Single" target="_blank" rel="nofollow">Single</a>.</p>
+            <p><a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow">沪ICP备17057450号-1</a>&nbsp;&nbsp;Sponsor: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="nofollow" style="vertical-align:text-bottom"><img src="<?php $this -> options -> themeUrl('img/upyun_logo.svg'); ?>" style="width: 70px" alt="又拍云"></a></p>
         </section>
     </div>
 </footer>

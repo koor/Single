@@ -46,7 +46,7 @@
             </div>
         </section>
 <?php endif; ?>
-        <?php $this -> need('comments.php'); ?>
+        <?php /* $this -> need('comments.php'); */ ?>
     </div>
 </main>
 

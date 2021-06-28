@@ -155,8 +155,15 @@ input, textarea, code, hr, blockquote{
     body{
         color: #aaa;
         background: #333;
-        --board-back: #444;
-        --board-border: #555;
+
+        --blue: #6e8aad;
+        --light-blue: #6f9fc7;
+
+        --border: #555;
+        --dark-border: #666;
+        --light-border: #555;
+
+        --light-background: #444;
     }
     
     body::-webkit-scrollbar{
@@ -164,43 +171,18 @@ input, textarea, code, hr, blockquote{
         background: rgba(255, 255, 255, .2);
     }
     
-    body a{ color: #c9861d }
-    body a:hover{ color: #eb9c26 }
-    
     body img{
         filter: brightness(60%);
         -webkit-filter: brightness(60%);
     }
     
     body blockquote{
-        color: #c9861d;
+        color: #ddd;
         border-color: #eb9c26;
         background: rgba(255, 255, 255, .05);
     }
     
-    /* -- 边框 */
-    body header, body .head-menu .sub-menu, body main .article-list,
-    body .post-item h2 a, body .post-title, body .page-title, body .post-author,
-    body tr, body hr, body pre code, body input, body textarea, body .btn, body .toggle-list,
-    body footer, body .to-top{ border-color: #555 }
-    
-    /* -- 透明 */
     body iframe, body em{ opacity: .6 }
-    
-    /* -- 颜色 */
-    body .btn{ color: inherit }
-    
-    /* -- 背景 */
-    body input, body textarea, body .btn, body .to-top, body .toggle-list{ background: #444 }
-    
-    /* -- 头部 */
-    body header, body .head-menu .sub-menu, body .head-menu .sub-menu:before{
-        color: #aaa;
-        background: #444;
-    }
-    body .head-menu .sub-menu:before{
-        border-color: #555 #555 transparent transparent;
-    }
     
     body :not(pre) > code{
         color: #ffa5a5;
@@ -211,15 +193,7 @@ input, textarea, code, hr, blockquote{
         background: #666;
         border-color: transparent;
     }
-    body .head-search input::-webkit-input-placeholder{ color: #bbb }
-    
-    body header a{ color: #aaa }
-    body header a:hover{ color: #ddd }
-    
-    @media screen and (max-width: 600px){
-        body .head-menu .sub-menu{ background: none }
-    }
-    
+    body .head-search input::-webkit-input-placeholder{ color: #bbb }        
 }
 
 /* 1 - 页眉
@@ -373,7 +347,7 @@ header{
     .toggle-btn{ display: none }
 }
 
-.toggle-btn, .light-btn, .search-btn{
+.toggle-btn, .search-btn{
     z-index: 1;
     float: left;
     width: 2em;
@@ -386,20 +360,18 @@ header{
 
 .toggle-btn{ margin-right: 0 }
 .search-btn{ float: right }
-.light-btn{ display: none }
 
-.toggle-btn:hover, .light-btn:hover, .search-btn:hover{
+.toggle-btn:hover, .search-btn:hover{
     background: rgba(0, 0, 0, .05);
 }
 
-.toggle-btn:before, .light-btn:before, .search-btn:before{
+.toggle-btn:before, .search-btn:before{
     display: block;
     text-align: center;
     font: 1em/2em "FontAwesome";
 }
 
 .toggle-btn:before{ content: "\f0c9" }
-.light-btn:before{ content: "\f0eb" }
 .search-btn:before{ content: "\f002" }
 
 .head-search{
