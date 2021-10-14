@@ -166,8 +166,7 @@ audio, video{ outline: none }
 
 /* - 文章 */
 article{
-    word-break: break-all;
-    letter-spacing: .03em;
+    word-break: break-word;
 }
 
 article > *{ margin-bottom: 1em }

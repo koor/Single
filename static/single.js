@@ -24,9 +24,11 @@ var Paul_Single = function (config) {
 
         var search = document.getElementsByClassName("search-btn")[0];
         var bar = document.getElementsByClassName("head-search")[0];
+        var input = document.querySelector('.head-search input');
 
         search.addEventListener("click", function () {
             bar.classList.toggle("active");
+            bar.classList.contains("active") ? input.focus() : input.blur();
         })
     };
 
